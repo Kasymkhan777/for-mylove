@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Для тебя 🤍</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top, #f3efe9, #e7ded3, #d8cfc4);
+      color: #3b3b3b;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 28px;
+      padding: 34px 30px 38px;
+      max-width: 440px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+      animation: appear 1.2s ease;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      margin: 0 0 16px;
+      color: #6b4e3d;
+    }
+
+    .photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 18px 0 22px;
+    }
+
+    .photos img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+    }
+
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(to right, transparent, #c9a48a, transparent);
+      margin: 18px auto;
+    }
+
+    p {
+      font-size: 15.5px;
+      line-height: 1.7;
+      margin: 12px 0;
+    }
+
+    .highlight {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      color: #8a5a44;
+    }
+
+    button {
+      margin-top: 26px;
+      padding: 14px 26px;
+      border: none;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #c9a48a, #8a5a44);
+      color: #fff;
+      font-size: 15px;
+      cursor: pointer;
+      box-shadow: 0 12px 24px rgba(138, 90, 68, 0.35);
+    }
+
+    .hidden { display: none; }
+
+    iframe {
+      margin-top: 20px;
+      width: 100%;
+      height: 220px;
+      border-radius: 16px;
+      border: none;
+    }
+
+    @keyframes appear {
+      from { opacity: 0; transform: translateY(20px) scale(0.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>прости меня</h1>
+
+    <div class="photos">
+      <img src="cookies_1.jpg" alt="вкусные печеньки" />
+      <img src="cookies_2.jpg" alt="вкусные домашние печеньки с кокосом" />
+    </div>
+
+    <div class="divider"></div>
+
+    <p>
+      я пошутил очень глупо и неуместно.<br>
+      прости за это
+    </p>
+
+    <p class="highlight">
+      я не пробовал твои печеньки,
+      но уверен они самые вкусные на земле.
+    </p>
+
+    <p>потому что они сделаны тобой любовь моя</p>
+
+    <button onclick="forgive()">Если ты меня простила</button>
+
+    <div id="video" class="hidden">
+      <iframe 
+        src="https://www.youtube.com/embed/52qB-ymM3eg?autoplay=1&rel=0" 
+        allow="autoplay; encrypted-media">
+      </iframe>
+    </div>
+  </div>
+
+  <script>
+    function forgive() {
+      document.getElementById('video').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
